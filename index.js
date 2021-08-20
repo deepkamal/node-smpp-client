@@ -1,6 +1,6 @@
 let session_config = {
     connect:{
-        url: 'smpp://197.210.3.229 :10000',
+        url: 'smpp://197.210.3.229:10000',
         auto_enquire_link_period: 10000
     },
     bind:{
