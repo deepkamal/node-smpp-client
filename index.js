@@ -20,7 +20,7 @@ session.bind_transmitter(session_config.bind, function(pdu) {
         // Successfully bound
         session.submit_sm({
             destination_addr: '+2348033897513',
-            short_message: 'Hello from DKS!'
+            short_message: 'Hello from Deep!'
         }, function(pdu) {
             if (pdu.command_status == 0) {
                 // Message successfully sent
