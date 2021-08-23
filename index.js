@@ -10,7 +10,7 @@ let session_config = {
 }
 
 let smpp = require('smpp');
-console.log("Process started, attempting connection now")
+console.log("Process started, attempting connection now...")
 let session = smpp.connect(session_config.connect);
 console.log("Session connect:",session.options,"Now attempting bind_trasmitter mode")
 
@@ -24,7 +24,7 @@ session.bind_transmitter(session_config.bind, function(pdu) {
         }, function(pdu) {
             if (pdu.command_status == 0) {
                 // Message successfully sent
-                console.log(pdu.message_id);
+                console.log(`Message sent successfully, received ID:${pdu.message_id}`);
             }
         });
     }
