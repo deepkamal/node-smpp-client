@@ -15,7 +15,7 @@ let session = smpp.connect(session_config.connect);
 console.log("Session connect:",session.options,"Now attempting bind_trasmitter mode")
 
 session.bind_transmitter(session_config.bind, function(pdu) {
-    console.log(`PDU Received ${pdu}`)
+    console.log(`PDU Received ${JSON.stringify(pdu)}`)
     if (pdu.command_status == 0) {
         // Successfully bound
         session.submit_sm({
